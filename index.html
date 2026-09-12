@@ -1,1 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Problems We Faced</title>
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #141b2f;
+      --card-2: #10172a;
+      --text: #f5f1e8;
+      --muted: #aeb6c8;
+      --accent: #d19a66;
+      --line: #2b3550;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+      padding: 60px 0;
+    }
+
+    header {
+      margin-bottom: 42px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.1;
+      margin: 0 0 18px;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 780px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(
+        145deg,
+        var(--card),
+        var(--card-2)
+      );
+
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+
+      box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .hour {
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      margin: 0 0 15px;
+      font-size: 1.45rem;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .label {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 12px 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    .lesson,
+    .key-fix {
+      margin-top: 18px;
+      padding: 14px 16px;
+
+      border-left: 3px solid var(--accent);
+
+      background: rgba(209, 154, 102, 0.07);
+      border-radius: 8px;
+    }
+
+    .lesson strong,
+    .key-fix strong {
+      color: var(--accent);
+    }
+
+    .flow {
+      margin: 16px 0;
+      padding: 18px;
+
+      border-radius: 12px;
+      background: #0b1224;
+      border: 1px solid var(--line);
+
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .takeaway {
+      margin-top: 45px;
+      padding: 32px;
+
+      border-radius: 20px;
+
+      background: linear-gradient(
+        145deg,
+        #181f34,
+        #0f1628
+      );
+
+      border: 1px solid var(--line);
+    }
+
+    .takeaway h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .quote {
+      margin-top: 22px;
+      padding: 20px;
+
+      border-left: 4px solid var(--accent);
+
+      color: var(--text);
+      font-size: 1.08rem;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        padding: 35px 0;
+      }
+
+      .card,
+      .takeaway {
+        padding: 22px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- HEADER -->
+    <header>
+
+      <div class="eyebrow">
+        Project Development Journey
+      </div>
+
+      <h1>
+        Problems We Faced
+      </h1>
+
+      <p class="intro">
+        Building our project wasn't a straight line from idea to
+        working prototype. As CS students stepping into hardware,
+        every working component came with a little debugging adventure.
+      </p>
+
+    </header>
+
+
+    <!-- TIMELINE -->
+    <section class="timeline">
+
+
+      <!-- HOUR 01 -->
+      <article class="card">
+
+        <div class="hour">
+          Hour 01
+        </div>
+
+        <h2>
+          Entering the Hardware World
+        </h2>
+
+        <p>
+          Our team comes from a CS background, so working with sensors,
+          motors, GPIO pins, external power supplies and physical wiring
+          was completely new territory.
+        </p>
+
+        <p>
+          Unlike software debugging, where an error usually points
+          somewhere in the code, hardware debugging meant checking
+          wires, voltages, grounds and connections one by one.
+        </p>
+
+        <p>
+          <span class="label">Challenge:</span>
+          Understanding how software and hardware actually communicate.
+        </p>
+
+      </article>
+
+
+      <!-- HOUR 03 -->
+      <article class="card">
+
+        <div class="hour">
+          Hour 03
+        </div>
+
+        <h2>
+          The Silent Microphone
+        </h2>
+
+        <p>
+          The INMP441 microphone was connected, but the ESP32 wasn't
+          receiving meaningful audio data. The Serial Monitor remained
+          almost flat even when we made loud noises around the microphone.
+        </p>
+
+        <p>
+          We went through the usual suspects:
+        </p>
+
+        <ul>
+          <li>Wiring and pin connections</li>
+          <li>I2S configuration</li>
+          <li>Sample rate</li>
+          <li>Input data configuration</li>
+          <li>Serial output</li>
+        </ul>
+
+        <p>
+          After several rounds of testing and debugging, the microphone
+          finally started responding correctly.
+        </p>
+
+        <div class="lesson">
+
+          <strong>Lesson:</strong>
+          In hardware, “the code is running” doesn't necessarily mean
+          “the system is working.”
+
+        </div>
+
+      </article>
+
+
+      <!-- HOUR 06 -->
+      <article class="card">
+
+        <div class="hour">
+          Hour 06
+        </div>
+
+        <h2>
+          The Servo That Refused to Move
+        </h2>
+
+        <p>
+          Next came the servo motor. The code was being executed,
+          the servo was connected, but the motor wasn't behaving reliably.
+        </p>
+
+        <p>
+          After tracing the power and signal connections, we found
+          the actual problem: the external power supply and ESP32
+          didn't share a common ground.
+        </p>
+
+        <p>
+          Once the servo power GND was connected to the ESP32 GND,
+          the servo immediately started responding as expected.
+        </p>
+
+        <div class="key-fix">
+
+          <strong>Key Fix:</strong>
+          Common ground between the external power supply and ESP32.
+
+        </div>
+
+        <div class="lesson">
+
+          <strong>Lesson:</strong>
+          Sometimes the bug isn't in the code. It's literally in the ground.
+
+        </div>
+
+      </article>
+
+
+      <!-- HOUR 10 -->
+      <article class="card">
+
+        <div class="hour">
+          Hour 10
+        </div>
+
+        <h2>
+          Lights, Sound &amp; Integration
+        </h2>
+
+        <p>
+          Once the individual components started working, the next
+          challenge was making them work together.
+        </p>
+
+        <p>
+          We integrated:
+        </p>
+
+        <ul>
+          <li>RGB LED effects</li>
+          <li>Cry-detection trigger</li>
+          <li>Servo movement</li>
+          <li>Music/lullaby playback</li>
+        </ul>
+
+        <p>
+          The difficulty wasn't getting each component to work
+          individually. It was coordinating them without one process
+          interfering with another.
+        </p>
+
+        <p>
+          We had to think about timing, triggering and how multiple
+          hardware actions should respond to a single cry-detection event.
+        </p>
+
+        <p>
+          <span class="label">Challenge:</span>
+          Turning independent components into one coordinated system.
+        </p>
+
+      </article>
+
+
+      <!-- HOUR 14 -->
+      <article class="card">
+
+        <div class="hour">
+          Hour 14
+        </div>
+
+        <h2>
+          Training the Brain
+        </h2>
+
+        <p>
+          Hardware was only half the battle. We also needed the system
+          to distinguish between a baby cry and non-cry sounds.
+        </p>
+
+        <p>
+          Training the ML model introduced a completely different
+          set of problems:
+        </p>
+
+        <ul>
+          <li>Collecting enough audio samples</li>
+          <li>Maintaining good-quality recordings</li>
+          <li>Correctly labeling cry and non-cry sounds</li>
+          <li>Reducing false detections</li>
+          <li>Keeping the model lightweight enough for ESP32 deployment</li>
+        </ul>
+
+        <p>
+          Getting a model that simply works is one thing. Getting one
+          that works reliably on a small embedded device is another.
+        </p>
+
+        <div class="lesson">
+
+          <strong>Lesson:</strong>
+          Good AI starts with good data, not just a fancy model.
+
+        </div>
+
+      </article>
+
+
+      <!-- HOUR 18 -->
+      <article class="card">
+
+        <div class="hour">
+          Hour 18
+        </div>
+
+        <h2>
+          From Individual Fixes to One System
+        </h2>
+
+        <p>
+          After debugging the microphone, servo, lighting, audio and
+          ML pipeline individually, we began connecting everything
+          into the final workflow.
+        </p>
+
+        <div class="flow">
+
+          Cry detected →
+          ESP32 processes the signal →
+          LCD responds →
+          servo activates →
+          RGB lights react →
+          music plays.
+
+        </div>
+
+        <p>
+          This was the point where our project stopped looking like
+          a collection of components and started behaving like an
+          actual system.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <!-- WHAT WE LEARNED -->
+    <section class="takeaway">
+
+      <h2>
+        What We Learned
+      </h2>
+
+      <p>
+        The biggest challenge wasn't any single component.
+        It was learning to move from software thinking to systems thinking.
+      </p>
+
+      <p>
+        We had to debug code, circuits, power, timing, machine learning
+        and hardware integration together.
+      </p>
+
+      <div class="quote">
+
+        And somewhere along the way, a group of CS students became
+        people who could look at a pile of wires and say:
+
+        “Okay. Let's find out why this isn't working.”
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
