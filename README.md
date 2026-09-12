@@ -1,4 +1,4 @@
-# Tharattu.Drop() 🎯🎶
+# Tharattu.Drop() 
 
 ### കുഞ്ഞിന് പ്രാണ വേദന, അമ്മക്ക് വീണ വായന
 
@@ -15,11 +15,11 @@
 
 ## Project Description
 
-An ESP32-powered smart cradle that listens for a baby's cry and responds in the most unnecessarily entertaining way possible. It rocks the cradle, flashes LEDs, and turns a connected phone into a DJ dashboard with pulsing visuals and music.
+An ESP32-powered smart cradle that listens for a baby's cry and responds in the most unnecessarily entertaining way possible. It rocks the cradle, flashes LEDs, and turns a connected device into a DJ dashboard with pulsing visuals and music.
 What if a baby’s cry didn’t mean *“here we go again”*, but *“DJ, drop the beat!”*?
-Inspired by the Malayalam proverb **“Kunhinu Pranavedana, Ammakku Veenavayanam”**, Tharattu.Drop() turns the situation on its head. When the baby cries, the cradle detects it, starts rocking, and drops a DJ beat to give the mother an unexpected energy boost.
-We took a traditional lullaby moment and gave it an unnecessarily over-engineered Gen-Z upgrade: **baby cries → cradle rocks → DJ drops → mom gets the vibe.**
-Because if the baby has to cry, the mother might as well get a soundtrack. 🎧
+Inspired by the Malayalam proverb *“അമ്മയ്ക്ക് പ്രാണ വേദന, മകനു വീണ വായന”*, Tharattu.Drop() is the flipped version of the proverb. When the baby cries, the cradle detects it, starts rocking, and drops a DJ beat to give the mother an unexpected energy boost.
+We took a traditional lullaby moment and gave it an unnecessarily over-engineered Gen-Z upgrade: *baby cries → cradle rocks → DJ drops → mom gets the vibe.*
+While the baby cries, mother vibes the beat!!
 The baby gets rocked. The mother gets a rave.
 
 ---
@@ -195,9 +195,9 @@ Core project idea : https://drive.google.com/file/d/1O9afWyGnTwVjqKNL_oX_tFpobcR
 
 ## The Inspiration
 
-### കുഞ്ഞിന് പ്രാണ വേദന, അമ്മക്ക് വീണ വായന
+### അമ്മയ്ക്ക് പ്രാണ വേദന മകന് വീണ വായന
 
-The project takes inspiration from the Malayalam proverb describing a mother enjoying music while her child suffers.
+The project takes inspiration from the Malayalam proverb describing a child enjoying music while her mother suffers.
 
 We already had the proverb.
 
