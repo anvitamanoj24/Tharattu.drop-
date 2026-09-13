@@ -23,7 +23,7 @@ While the baby cries, mother vibes the beat!!
 The baby gets rocked. The mother gets a rave.
 
 ---
-## The Problem (that doesn't exist)
+## The Problem 
 
 Babies cry. Mothers hear them, walk over, and rock them back to sleep.
 
@@ -41,7 +41,7 @@ We fixed that.
 
 ---
 
-## The Solution (that nobody asked for)
+## The Solution
 
 Tharattu.Drop() detects a baby's cry using an INMP441 microphone connected to an ESP32.
 
@@ -188,8 +188,8 @@ Core project idea : https://drive.google.com/file/d/1O9afWyGnTwVjqKNL_oX_tFpobcR
 
 # Team Contributions
 
-* **Anvita M.K:** Team coordination, hardware integration, cradle mechanism and system development.
-* **Hrudya Mohan:** ESP32 programming, web dashboard, cry detection logic and system integration.
+* **Anvita M.K:** ESP32 programming, web dashboard, cry detection logic and system integration.
+* **Hrudya Mohan:** Team coordination, hardware integration, cradle mechanism and system development. 
 
 ---
 
